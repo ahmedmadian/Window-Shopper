@@ -37,13 +37,14 @@ class CustomeTextField: UITextField {
     }
     
     func setUpSymbolLabel() {
-        let size: CGFloat = 20
+        let size: CGFloat = 30
         let currencyLabel = UILabel(frame: CGRect(x: 5, y: (frame.size.height / 2) - size / 2, width: size, height: size))
         currencyLabel.backgroundColor = #colorLiteral(red: 0.8814564443, green: 0.8814564443, blue: 0.8814564443, alpha: 0.8)
         currencyLabel.textAlignment = .center
         currencyLabel.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         currencyLabel.layer.cornerRadius = 5.0
         currencyLabel.clipsToBounds = true
+        currencyLabel.adjustsFontSizeToFitWidth = true
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
